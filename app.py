@@ -4,7 +4,6 @@ import plotly.express as px
 from pycaret.classification import setup, compare_models, pull, save_model, load_model
 from pycaret.regression import setup, compare_models, pull, save_model, load_model
 import ydata_profiling
-from PIL import Image
 import pandas as pd
 from streamlit_pandas_profiling import st_profile_report
 import os
@@ -41,8 +40,7 @@ selected = option_menu(
 if selected == "Dashboard":
     la1, la2 = st.columns(2)
     with la1:
-        logo = Image.open("logo.png")
-        st.image(logo.resize((480,480)))
+        st.image("autobot.gif")
     with la2:
         st.title("AutoBot")
         st.write(des)
