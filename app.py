@@ -16,18 +16,7 @@ st.set_page_config(
 
 )
 
-des = """AutoBot is a web-based AutoML application. This application is designed to train Machine 
-Learning models on a provided dataset. The images you see represent various aspects of the project. The crystal ball 
-image symbolizes the predictive power of machine learning models, which can "see" patterns in data and make 
-predictions about future data. The high-tech theme of the images reflects the advanced algorithms and computational 
-processes involved in training these models. The web-based nature of the application means that it can be accessed 
-from anywhere with an internet connection, making it highly accessible and user-friendly. Users can upload their 
-datasets, select the type of model they want to train, and then let the application handle the rest. The application 
-will automatically preprocess the data, select the best model parameters, and train the model. Once the model is 
-trained, users can download it for use in their own projects or use it directly within the application to make 
-predictions on new data. Overall, AutoBot represents a powerful tool for anyone looking to 
-leverage the power of machine learning, whether they are experienced data scientists or beginners just starting out 
-in the field."""
+des = """AutoBot is an online AutoML application designed to train Machine Learning models using a provided dataset. The images you see depict different aspects of the project. The futuristic theme of the images mirrors the advanced algorithms and computational processes involved in model training. As a web-based application, it can be accessed from anywhere with an internet connection, enhancing its accessibility and user-friendliness. Users can upload their datasets, choose the model type they wish to train, and let the application handle the rest. The application automatically preprocesses the data, selects the best model parameters, and trains the model. Once the model is trained, users can either download it for use in their projects or use it directly within the application to make predictions on new data. In essence, AutoBot is a powerful tool for anyone wanting to harness the power of machine learning, whether they are experienced data scientists or beginners in the field."""
 
 # Nav Bar
 selected = option_menu(
