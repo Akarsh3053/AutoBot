@@ -122,7 +122,16 @@ if selected == "Regression":
 if selected == "Sample Applications":
     options = option_menu(
         menu_title=None,
-        options=["About", "Employee Churn Analysis", "Bitcoin Price Prediction", "Player Price Prediction",
-                 "Announcements"],
-        icons=["body-text", "briefcase", "coin", "dribbble", "megaphone"],
-        orientation="horizontal")
+        options=["About", "Employee Churn Analysis", "Bitcoin Price Prediction", "Player Price Prediction", "Announcements"],
+        icons=["body-text", "briefcase", "coin", "dribbble", "megaphone"], orientation="horizontal")
+    # ANNOUNCEMENTS
+    if options == "Announcements":
+        col1, col2, col3 = st.columns([2, 6, 2])
+
+        with col1:
+            st.write("")
+
+        with col2:
+            st.markdown("""<br>""", unsafe_allow_html=True)
+            st.image("images/Core.gif")
+            st.markdown("""<h1>More Updates On The Way . . . . """, unsafe_allow_html=True)
