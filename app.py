@@ -20,8 +20,7 @@ st.set_page_config(
 # Nav Bar
 selected = option_menu(
     menu_title="AutoBot",
-    options=["Dashboard", "Classification",
-             "Regression", "Sample Applications"],
+    options=["Dashboard", "Classification", "Regression", "Sample Applications"],
     icons=["boxes", "layout-wtf", "graph-up-arrow", "grid-fill"],
     menu_icon="stack",
     orientation="horizontal")
@@ -29,7 +28,7 @@ selected = option_menu(
 if selected == "Dashboard":
     la1, la2 = st.columns(2)
     with la1:
-        st.image("autobot.gif")
+        st.image("assets/autobot.gif")
     with la2:
         st.title("AutoBot")
         st.write("da")
@@ -121,4 +120,9 @@ if selected == "Regression":
             st.download_button('Download Model', f, file_name="best_model.pkl")
 
 if selected == "Sample Applications":
-    pass
+    options = option_menu(
+        menu_title=None,
+        options=["About", "Employee Churn Analysis", "Bitcoin Price Prediction", "Player Price Prediction",
+                 "Announcements"],
+        icons=["body-text", "briefcase", "coin", "dribbble", "megaphone"],
+        orientation="horizontal")
