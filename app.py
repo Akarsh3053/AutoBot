@@ -49,6 +49,27 @@ if selected == "Dashboard":
     with la2:
         st.markdown(body, unsafe_allow_html=True)
     st.markdown("<hr style='border:1px dashed #FF4B4B'>", unsafe_allow_html=True)
+    aa1, aa2 = st.columns(2)
+    with aa1:
+        body = """
+            <h1>Here is how you can gain my superpowers✨</h1>
+            <p>Together we can train a machine learning model in a few simple steps:</p>
+            <h3>Upload Your Dataset📑:</h3>
+            <p>Begin by uploading your dataset using the "Upload" section. Click on the "Upload Your Dataset" button and
+             select your dataset <b>CSV<b> file.</p>
+            <h3>I will generate a detailed EDA📋:</h3>
+            <p>Once your dataset is uploaded, explore its characteristics through the "Profiling" section.
+            Autobot performs EDA on the dataset so that you know more about it.</p>
+            <h3>Train Your Model🧮:</h3>
+            <p>Move on to the "Modelling" section and choose the target column then from here Autobot does all the work 
+            it trains, compares different models, and selects the best-performing one.</p>
+            <h3>Download Your Model💾:</h3>
+            <p>After all this, a best performing trained model is ready, download it and use wherever you want.</p> 
+            """
+        st.markdown(body, unsafe_allow_html=True)
+    with aa2:
+        ins = Image.open("assets/manual.png")
+        st.image(ins.resize((700, 700)))
 
 # Classification Trainer Code
 
