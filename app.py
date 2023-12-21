@@ -26,12 +26,29 @@ selected = option_menu(
     orientation="horizontal")
 
 if selected == "Dashboard":
+    body = """
+    <h1> <marquee behavior="alternate">Hi! there👋 I am Autobot</marquee></h1>
+    <p>Embark on your ML journey with me, and don't you worry you dont need to have any superpowers.
+    I will be there helping you out just bring the data to me I am your Sherlock😉</p>
+    <h3>Who am I, you ask❓</h3>
+    <p>I am Autobot, an innovative AutoML web application designed to make machine learning accessible to everyone. With
+     me, you can train machine learning models without writing a single line of complex code. I am user-friendly and 
+     intuitive, making it easy for both beginners and experts to create, train, and deploy models. Whether you’re 
+     looking to predict sales, find out more about a dataset, or anything in between,I’m here to help you achieve your goals with
+      the power of machine learning. Let’s start this exciting journey together!</p>
+    <h3>How can I make your life easier❓</h3>
+    <p>I simplify your life by enabling on-the-go dataset analysis and model training without complex coding. I save 
+    you time and effort by handling the technical aspects of machine learning, so you can focus on interpreting results 
+    and making data-driven decisions. I make machine learning accessible to everyone, regardless of their background in
+     data science or programming. By democratizing machine learning, I aim to make it beneficial for all. Let’s start 
+     this exciting journey together!</p>
+    """
     la1, la2 = st.columns(2)
     with la1:
         st.image("assets/autobot.gif")
     with la2:
-        st.title("AutoBot")
-        st.write("da")
+        st.markdown(body, unsafe_allow_html=True)
+    st.markdown("<hr style='border:1px dashed #FF4B4B'>", unsafe_allow_html=True)
 
 # Classification Trainer Code
 
