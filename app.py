@@ -133,5 +133,5 @@ if selected == "Sample Applications":
 
         with col2:
             st.markdown("""<br>""", unsafe_allow_html=True)
-            st.image("images/Core.gif")
+            st.image("assets/updates.gif")
             st.markdown("""<h1>More Updates On The Way . . . . """, unsafe_allow_html=True)
