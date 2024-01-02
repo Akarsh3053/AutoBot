@@ -161,25 +161,22 @@ if selected == "Sample Applications":
     options = option_menu(
         menu_title=None,
         options=["About", "Employee Churn Analysis", "Bitcoin Price Prediction", "Announcements"],
-        icons=["body-text", "briefcase", "coin", "megaphone"], default_index=3,orientation="horizontal")
+        icons=["body-text", "briefcase", "coin", "megaphone"],orientation="horizontal")
     # About
     if options == "About":
-        la1, la2 = st.columns(2)
+        x, la1, la2 = st.columns(3)
         with la1:
-            st.image("assets/core.gif")
+            element = """
+            <h1 style="padding-top:65px">Sample Model Significance</h1>
+            <p>I will also provides some sample models just to showcase how machine learning can really enable 
+            you to see into the future by making 
+            predictions on data by learning from it. These are just to showcase for displaying the capabilities
+            the models trained here.</p>"""
+            st.markdown(element, unsafe_allow_html=True)
         with la2:
-            h1 = """
-                    <h1 style="padding-top:65px">
-                    Sample Model Significance
-                    </h1>
-                    <p>I will also provides some sample models just to showcase how machine learning can really enable 
-                    you to see into the future by making 
-                    predictions on data by learning from it. These are just to showcase for displaying the capabilities
-                    the models trained here.
-                    </p>
-                    """
-            st.markdown(h1, unsafe_allow_html=True)
-        st.markdown("<hr style='border:1px solid grey'>", unsafe_allow_html=True)
+            ins = Image.open("assets/manual.png")
+            st.image(ins.resize((400, 400)))
+        st.markdown("<hr style='border:2px dotted #FF4B4B'>", unsafe_allow_html=True)
 
     # ANNOUNCEMENTS
     if options == "Announcements":
