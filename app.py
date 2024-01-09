@@ -201,7 +201,6 @@ if selected == "Sample Applications":
         from sklearn.model_selection import train_test_split
         from sklearn.preprocessing import StandardScaler, LabelEncoder
         from sklearn import metrics
-        import plotly.express as px
 
         # Load the pre-trained model
         model = pickle.load(open('pretrained models/employee_churn_model.pkl', 'rb'))
@@ -252,7 +251,7 @@ if selected == "Sample Applications":
             df = df.fillna(df.mean())
 
         with st.sidebar:
-            st.image('images/employee churn.jpg')
+            st.image('assets/Core.gif')
             st.title("Employee Churn")
             choice = st.radio("Navigation",
                               ["Profiling", "Stayed vs. Left: Employee Data Comparison",
@@ -261,10 +260,9 @@ if selected == "Sample Applications":
                                "Time Spent in Company",
                                "Employee Count by Features", "Clustering of Employees who Left",
                                "Employee Clustering Analysis", "Predict Churn"])
-            st.info(
-                "Employee Churn App provides a user-friendly interface for HR professionals and data enthusiasts to "
-                "explore and gain insights from employee data, with a focus on predicting and understanding employee "
-                "turnover.")
+            st.info("This Module is a user-friendly application for data analytics. It enables"
+                    " exploration of employee data and predicts turnover, aiding HR professionals and data"
+                    " enthusiasts in making informed decisions.")
 
         if choice == "Profiling":
             st.title("Data Profiling Dashboard")
