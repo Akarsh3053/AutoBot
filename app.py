@@ -21,7 +21,8 @@ st.set_page_config(
 # Nav Bar
 selected = option_menu(
     menu_title="AutoBot",
-    options=["Dashboard", "Classification", "Regression", "Sample Applications"],
+    options=["Dashboard", "Classification",
+             "Regression", "Sample Applications"],
     icons=["boxes", "layout-wtf", "graph-up-arrow", "grid-fill"],
     menu_icon="stack",
     orientation="horizontal")
@@ -49,7 +50,8 @@ if selected == "Dashboard":
         st.image("assets/autobot.gif")
     with la2:
         st.markdown(body, unsafe_allow_html=True)
-    st.markdown("<hr style='border:1px dashed #FF4B4B'>", unsafe_allow_html=True)
+    st.markdown("<hr style='border:1px dashed #FF4B4B'>",
+                unsafe_allow_html=True)
     aa1, aa2 = st.columns(2)
     with aa1:
         body = """
@@ -161,8 +163,9 @@ if selected == "Regression":
 if selected == "Sample Applications":
     options = option_menu(
         menu_title=None,
-        options=["About", "Employee Churn Analysis", "Bitcoin Price Prediction", "Announcements"],
-        icons=["body-text", "briefcase", "coin", "megaphone"],orientation="horizontal")
+        options=["About", "Employee Churn Analysis",
+                 "Bitcoin Price Prediction", "Announcements"],
+        icons=["body-text", "briefcase", "coin", "megaphone"], orientation="horizontal")
     # About
     if options == "About":
         x, la1, la2 = st.columns(3)
@@ -177,7 +180,8 @@ if selected == "Sample Applications":
         with la2:
             ins = Image.open("assets/manual.png")
             st.image(ins.resize((400, 400)))
-        st.markdown("<hr style='border:2px dotted #FF4B4B'>", unsafe_allow_html=True)
+        st.markdown("<hr style='border:2px dotted #FF4B4B'>",
+                    unsafe_allow_html=True)
 
     # ANNOUNCEMENTS
     if options == "Announcements":
@@ -189,10 +193,10 @@ if selected == "Sample Applications":
         with col2:
             st.markdown("""<br>""", unsafe_allow_html=True)
             st.image("assets/updates.gif")
-            st.markdown("""<h1>More Updates On The Way . . . . """, unsafe_allow_html=True)
+            st.markdown("""<h1>More Updates On The Way . . . . """,
+                        unsafe_allow_html=True)
 
-
-    #EMPLOYEE CHURN ANALYSIS
+    # EMPLOYEE CHURN ANALYSIS
     if options == "Employee Churn Analysis":
         import matplotlib.pyplot as plt
         import seaborn as sns
@@ -203,7 +207,8 @@ if selected == "Sample Applications":
         from sklearn import metrics
 
         # Load the pre-trained model
-        model = pickle.load(open('pretrained models/employee_churn_model.pkl', 'rb'))
+        model = pickle.load(
+            open('pretrained models/employee_churn_model.pkl', 'rb'))
 
         # Load the CSV file
         if os.path.exists('./datasets/HR_comma_sep.csv'):
@@ -233,16 +238,15 @@ if selected == "Sample Applications":
                                                            int(df[feature].max()), int(df[feature].mean()))
                 else:
                     # Handle other data types as needed
-                    user_data[feature] = st.sidebar.text_input(f'Enter {feature}', df[feature].iloc[0])
+                    user_data[feature] = st.sidebar.text_input(
+                        f'Enter {feature}', df[feature].iloc[0])
 
             return pd.DataFrame(user_data, index=[0])
-
 
         def descriptive_statistics():
             st.title(" Employee Attrition Analysis")
             b = df.describe()
             st.dataframe(b)
-
 
         df['Departments '] = LabelEncoder().fit_transform(df['Departments '])
         df['salary'] = LabelEncoder().fit_transform(df['salary'])
@@ -251,8 +255,8 @@ if selected == "Sample Applications":
             df = df.fillna(df.mean())
 
         with st.sidebar:
-            st.image('assets/Core.gif')
-            st.title("Employee Churn")
+            st.image('assets/employee.gif')
+            st.title("Employee Churn Analysis")
             choice = st.radio("Navigation",
                               ["Profiling", "Stayed vs. Left: Employee Data Comparison",
                                "Descriptive Statistics Overview",
@@ -270,7 +274,8 @@ if selected == "Sample Applications":
             st.dataframe(a)
 
         if choice == "Stayed vs. Left: Employee Data Comparison":
-            st.title("Employee Retention Analysis: Comparing Characteristics of Stayed and Left Groups")
+            st.title(
+                "Employee Retention Analysis: Comparing Characteristics of Stayed and Left Groups")
             left = df.groupby('left')
             b = left.mean()
             st.dataframe(b)
@@ -292,7 +297,8 @@ if selected == "Sample Applications":
         if choice == "Number of Projects Distribution":
             st.title("Employees' Project Distribution")
             num_projects = df.groupby('number_project').count()
-            plt.bar(num_projects.index.values, num_projects['satisfaction_level'])
+            plt.bar(num_projects.index.values,
+                    num_projects['satisfaction_level'])
             plt.xlabel('Number of Projects')
             plt.ylabel('Number of Employees')
             st.set_option('deprecation.showPyplotGlobalUse', False)
@@ -327,7 +333,8 @@ if selected == "Sample Applications":
                     'average_montly_hours', 'time_spend_company', 'Work_accident',
                     'promotion_last_5years', 'Departments ', 'salary']]
             y = df['left']
-            X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+            X_train, X_test, y_train, y_test = train_test_split(
+                X, y, test_size=0.3, random_state=42)
             gb = GradientBoostingClassifier()
             gb.fit(X_train, y_train)
             y_pred = gb.predict(X_test)
@@ -345,10 +352,13 @@ if selected == "Sample Applications":
                 'Actual': y,
                 'Predicted': y_pred_all
             })
-            diff_all_df['Correct'] = (diff_all_df['Actual'] == diff_all_df['Predicted']).astype(int)
-            diff_counts = diff_all_df.groupby('Correct').size().reset_index(name='Count')
+            diff_all_df['Correct'] = (
+                diff_all_df['Actual'] == diff_all_df['Predicted']).astype(int)
+            diff_counts = diff_all_df.groupby(
+                'Correct').size().reset_index(name='Count')
             fig_diff_all = px.bar(diff_counts, x='Correct', y='Count', color='Correct',
-                                  labels={'Correct': 'Prediction Correctness', 'Count': 'Number of Samples'},
+                                  labels={'Correct': 'Prediction Correctness',
+                                          'Count': 'Number of Samples'},
                                   title='Actual vs Predicted for All Data',
                                   color_discrete_map={0: 'red', 1: 'green'})
             fig_diff_all.update_layout(showlegend=False)
@@ -357,8 +367,10 @@ if selected == "Sample Applications":
         if choice == "Employee Clustering Analysis":
             st.title("Employee Clustering Analysis")
             user_data = user_report()
-            user_data['Departments '] = LabelEncoder().fit_transform(user_data['Departments '])
-            user_data['salary'] = LabelEncoder().fit_transform(user_data['salary'])
+            user_data['Departments '] = LabelEncoder(
+            ).fit_transform(user_data['Departments '])
+            user_data['salary'] = LabelEncoder(
+            ).fit_transform(user_data['salary'])
             if user_data.isnull().any().any():
                 user_data = user_data.fillna(user_data.mean())
             features_for_clustering = ['satisfaction_level', 'last_evaluation', 'number_project',
@@ -368,7 +380,8 @@ if selected == "Sample Applications":
             user_data[['satisfaction_level', 'last_evaluation', 'average_montly_hours']] = scaler.fit_transform(
                 user_data[['satisfaction_level', 'last_evaluation', 'average_montly_hours']])
             X = df[features_for_clustering]
-            num_clusters = st.slider("Select Number of Clusters", min_value=2, max_value=10, value=3)
+            num_clusters = st.slider(
+                "Select Number of Clusters", min_value=2, max_value=10, value=3)
             kmeans = KMeans(n_clusters=num_clusters, random_state=42)
             df['Cluster'] = kmeans.fit_predict(X)
             fig_clusters = px.scatter_3d(df, x='satisfaction_level', y='last_evaluation', z='average_montly_hours',
@@ -378,7 +391,7 @@ if selected == "Sample Applications":
         if choice == "Predict Churn":
             st.title("Employee Churn Prediction")
             user_report_data = {
-            'salary': st.sidebar.selectbox('Salary', df['salary'].unique())
+                'salary': st.sidebar.selectbox('Salary', df['salary'].unique())
             }
             user_data = pd.DataFrame(user_report_data, index=[0])
             st.header('Employee Data for Prediction')
@@ -386,7 +399,8 @@ if selected == "Sample Applications":
             features_for_prediction = ['satisfaction_level', 'last_evaluation', 'number_project',
                                        'average_montly_hours', 'time_spend_company', 'Work_accident',
                                        'promotion_last_5years', 'Departments ', 'salary']
-            missing_columns = set(features_for_prediction) - set(user_data.columns)
+            missing_columns = set(features_for_prediction) - \
+                set(user_data.columns)
             if missing_columns:
                 st.error(f"Columns {missing_columns} not found in user data.")
             else:
