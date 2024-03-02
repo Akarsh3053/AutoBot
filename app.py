@@ -414,8 +414,8 @@ if selected == "Sample Applications":
 
     if options == "Bitcoin Price Prediction":
         with st.sidebar:
-            st.image('assets/employee.gif')
+            st.image('assets/bitcoin.gif')
             st.title("Bitcoin Price Prediction")
             choice = st.radio("Navigation",
                               ["Field 1", "Field 2",])
-            st.info("This Module is a user-friendly application for data analytics. It enables")
+            st.info("Description goes here")
