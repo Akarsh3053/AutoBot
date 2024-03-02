@@ -411,3 +411,11 @@ if selected == "Sample Applications":
                 churn_prediction = model.predict(X_pred)
                 st.subheader('Churn Prediction Result')
                 st.write(churn_prediction)
+
+    if options == "Bitcoin Price Prediction":
+        with st.sidebar:
+            st.image('assets/employee.gif')
+            st.title("Bitcoin Price Prediction")
+            choice = st.radio("Navigation",
+                              ["Field 1", "Field 2",])
+            st.info("This Module is a user-friendly application for data analytics. It enables")
