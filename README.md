@@ -39,3 +39,6 @@ Now, run the app
 ```bash
 streamlit run app.py
 ```
+
+### Updates....
+-[x] Removed BTC module from sample apps due to instability will be replaced or re modelled.
