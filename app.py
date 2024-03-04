@@ -416,6 +416,8 @@ if selected == "Sample Applications":
         with st.sidebar:
             st.image('assets/bitcoin.gif')
             st.title("Bitcoin Price Prediction")
-            choice = st.radio("Navigation",
-                              ["Field 1", "Field 2", ])
-            st.info("Module desc")
+
+        st.markdown("""<br>""", unsafe_allow_html=True)
+        st.image("assets/updates.gif")
+        st.markdown("""<h1>Coming soon. . . . """,
+                    unsafe_allow_html=True)
