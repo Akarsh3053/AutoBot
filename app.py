@@ -193,7 +193,7 @@ if selected == "Sample Applications":
         with col2:
             st.markdown("""<br>""", unsafe_allow_html=True)
             st.image("assets/updates.gif")
-            st.markdown("""<h1>More Updates On The Way . . . . """,
+            st.markdown("""<h2>More Updates on the way...</h2>""",
                         unsafe_allow_html=True)
 
     # EMPLOYEE CHURN ANALYSIS

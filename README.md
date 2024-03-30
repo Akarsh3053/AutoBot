@@ -45,5 +45,5 @@ streamlit run app.py
 ```
 
 ### Updates....
--[x] Removed BTC module from sample apps due to instability will be replaced or re-modelled.
--[x] Adding more options for data analytics and visualization.
+
+-[x] Removed BTC module from sample apps due to instability will be replaced or re-modelled. -[x] Adding more options for data analytics and visualization. -[x] Updating layout and UI
