@@ -163,9 +163,8 @@ if selected == "Regression":
 if selected == "Sample Applications":
     options = option_menu(
         menu_title=None,
-        options=["About", "Employee Churn Analysis",
-                 "Bitcoin Price Prediction", "Announcements"],
-        icons=["body-text", "briefcase", "coin", "megaphone"], orientation="horizontal")
+        options=["About", "Employee Churn Analysis", "Announcements"],
+        icons=["body-text", "briefcase", "megaphone"], orientation="horizontal")
     # About
     if options == "About":
         x, la1, la2 = st.columns(3)
@@ -411,13 +410,3 @@ if selected == "Sample Applications":
                 churn_prediction = model.predict(X_pred)
                 st.subheader('Churn Prediction Result')
                 st.write(churn_prediction)
-
-    if options == "Bitcoin Price Prediction":
-        with st.sidebar:
-            st.image('assets/bitcoin.gif')
-            st.title("Bitcoin Price Prediction")
-
-        st.markdown("""<br>""", unsafe_allow_html=True)
-        st.image("assets/updates.gif")
-        st.markdown("""<h1>Coming soon. . . . """,
-                    unsafe_allow_html=True)
