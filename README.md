@@ -1,5 +1,5 @@
-# AutoBot
-
+<div align="center"><img src="https://spacethemed-porfolio.vercel.app/Logo.gif" width="80px"> <br /> <h1>AutoBot</h1> 
+</div>
 This interactive Web-based AutoML app can train machine learning models with minimum effort, allowing users to develop Machine Learning apps quickly. It comes with an Interactive web-based dashboard it is easily accessible to all types of devices and can be easily deployed in all environments enabling users to train machine learning models on the go.
 
 # Screenshots
