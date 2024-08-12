@@ -163,8 +163,8 @@ if selected == "Regression":
 if selected == "Sample Applications":
     options = option_menu(
         menu_title=None,
-        options=["About", "Employee Churn Analysis", "Announcements"],
-        icons=["body-text", "briefcase", "megaphone"], orientation="horizontal")
+        options=["About", "Employee Churn Analysis","Dataset Analytics" "Announcements"],
+        icons=["body-text", "briefcase","coin", "megaphone"], orientation="horizontal")
     # About
     if options == "About":
         x, la1, la2 = st.columns(3)
@@ -181,6 +181,10 @@ if selected == "Sample Applications":
             st.image(ins.resize((400, 400)))
         st.markdown("<hr style='border:2px dotted #FF4B4B'>",
                     unsafe_allow_html=True)
+
+    # Data Analytics
+    if options == "Announcements":
+        st.markdown("<h1 style="padding-top:65px">", unsafe_allow_html=True) 
 
     # ANNOUNCEMENTS
     if options == "Announcements":
