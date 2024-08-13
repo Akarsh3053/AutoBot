@@ -184,7 +184,10 @@ if selected == "Sample Applications":
 
     # Data Analytics
     if options == "Announcements":
-        st.markdown("<h1 style="padding-top:65px">", unsafe_allow_html=True) 
+        st.markdown("""<h1 style="padding-top:65px">Data analysis and visualization.""", unsafe_allow_html=True) 
+        st.markdown("""<p>This app is designed to help data scientists, machine learning engineers, and business analysts to analyze and visualize data.
+        It's a comprehensive tool that allows you to explore, understand, and gain insights from your data.
+        </p>""", unsafe_allow_html=True)
 
     # ANNOUNCEMENTS
     if options == "Announcements":
