@@ -14,7 +14,8 @@ This interactive Web-based AutoML app can train machine learning models with min
 - On-the-go EDA for dataset
 - Classification Trainer
 - Regression Trainer
-- Pre-built demonstrations
+- Pre-built tools
+- Basic templates for easy start
 
 ## Tech Used
 
