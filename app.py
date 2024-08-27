@@ -7,9 +7,12 @@ import ydata_profiling
 import pickle
 from PIL import Image
 import pandas as pd
+from setuptools.package_index import unique_values
+from streamlit import columns
 from streamlit_pandas_profiling import st_profile_report
 import os
 from streamlit_option_menu import option_menu
+from toolz.curried import unique
 
 st.set_page_config(
     page_title="AutoBot",
@@ -196,6 +199,15 @@ if selected == "Sample Applications":
             df = pd.read_csv(upload_file)
             st.subheader("Data Preview")
             st.write(df.head())
+
+            st.subheader("Data Summary")
+            st.write(df.describe())
+
+            st.subheader('Filter Data')
+            columns = df.columns.tolist()
+            selected_column = st.selectbox("Select Columns to filter by", columns)
+            unique_values = df[selected_column].unique()
+            selected_value = st.selectbox("Select value", unique_values)
 
     # ANNOUNCEMENTS
     if options == "Announcements":
