@@ -163,8 +163,8 @@ if selected == "Regression":
 if selected == "Sample Applications":
     options = option_menu(
         menu_title=None,
-        options=["About", "Employee Churn Analysis","Dataset Analytics" "Announcements"],
-        icons=["body-text", "briefcase","coin", "megaphone"], orientation="horizontal")
+        options=["About", "Employee Churn Analysis","Data Analytics", "Announcements"],
+        icons=["body-text", "briefcase","bar-chart-line", "megaphone"], orientation="horizontal")
     # About
     if options == "About":
         x, la1, la2 = st.columns(3)
@@ -188,6 +188,14 @@ if selected == "Sample Applications":
         st.markdown("""<p>This app is designed to help data scientists, machine learning engineers, and business analysts to analyze and visualize data.
         It's a comprehensive tool that allows you to explore, understand, and gain insights from your data.
         </p>""", unsafe_allow_html=True)
+        st.markdown("<hr style='border:2px dotted #FF4B4B'>", unsafe_allow_html=True)
+
+        upload_file = st.file_uploader("Choose a CSV file", type='csv')
+
+        if upload_file is not None:
+            df = pd.read_csv(upload_file)
+            st.subheader("Data Preview")
+            st.write(df.head())
 
     # ANNOUNCEMENTS
     if options == "Announcements":
