@@ -45,5 +45,3 @@ Now, run the app
 streamlit run app.py
 ```
 
-### Updates....
-- Adding data profiler and visualB

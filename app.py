@@ -7,7 +7,6 @@ import ydata_profiling
 import pickle
 from PIL import Image
 import pandas as pd
-from setuptools.package_index import unique_values
 from streamlit import columns
 from streamlit_pandas_profiling import st_profile_report
 import os
@@ -208,6 +207,19 @@ if selected == "Sample Applications":
             selected_column = st.selectbox("Select Columns to filter by", columns)
             unique_values = df[selected_column].unique()
             selected_value = st.selectbox("Select value", unique_values)
+
+            filtered_df = df[df[selected_column] == selected_value]
+            st.write(filtered_df)
+
+            st.subheader("Plot Data")
+            x_column = st.selectbox("Select x-axis column", columns)
+            y_column = st.selectbox("Select y-axis column", columns)
+
+            if st.button("Generate Plot"):
+                st.line_chart(filtered_df.set_index(x_column)[y_column])
+
+        else:
+            st.write("Waiting for a file upload")
 
     # ANNOUNCEMENTS
     if options == "Announcements":
