@@ -167,6 +167,7 @@ if selected == "Sample Applications":
         menu_title=None,
         options=["About", "Employee Churn Analysis","Data Analytics", "Announcements"],
         icons=["body-text", "briefcase","bar-chart-line", "megaphone"], orientation="horizontal")
+
     # About
     if options == "About":
         x, la1, la2 = st.columns(3)
@@ -261,7 +262,6 @@ if selected == "Sample Applications":
             if os.path.exists('./datasets/HR_comma_sep.csv'):
                 df = pd.read_csv('datasets/HR_comma_sep.csv', index_col=None)
 
-            # Create an empty dictionary to store user input data
             user_data = {}
 
             # Iterate over features to get user input
@@ -439,6 +439,7 @@ if selected == "Sample Applications":
                                        'promotion_last_5years', 'Departments ', 'salary']
             missing_columns = set(features_for_prediction) - \
                 set(user_data.columns)
+
             if missing_columns:
                 st.error(f"Columns {missing_columns} not found in user data.")
             else:
