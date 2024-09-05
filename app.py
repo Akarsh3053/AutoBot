@@ -176,8 +176,7 @@ if selected == "Sample Applications":
             <h1 style="padding-top:65px">Sample Model Significance</h1>
             <p>I will also provides some sample models just to showcase how machine learning can really enable 
             you to see into the future by making 
-            predictions on data by learning from it. These are just to showcase for displaying the capabilities
-            the models trained here.</p>"""
+            predictions on data by learning from it. These are just just basic examples, you can do a lot more than that.</p>"""
             st.markdown(element, unsafe_allow_html=True)
         with la2:
             ins = Image.open("assets/manual.png")
