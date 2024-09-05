@@ -1,10 +1,15 @@
-<div align="center"><img src="https://spacethemed-porfolio.vercel.app/Logo.gif" width="80px"> <br /> <h1>AutoBot</h1> 
-</div>
+<div align="center"><img src="https://spacethemed-porfolio.vercel.app/Logo.gif" width="80px"> <br /> <h1>AutoBot</h1> </div>
 This interactive Web-based AutoML app can train machine learning models with minimum effort, allowing users to develop Machine Learning apps quickly. It comes with an Interactive web-based dashboard it is easily accessible to all types of devices and can be easily deployed in all environments enabling users to train machine learning models on the go.
 
 # Screenshots
 
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjb4qULU0a2BfdWjFpXUKm-tqnU2aSV7LF_SQ2u0XNr1KdHr_yQ1wBLxKlz872wvfrWVnr-S4ffFXwyhWiqZDClTh7bU_QFV0Z_4l5LybF8qtGP2ma0pFu7kDc_ObI0WoGYJwPKIMf4xOJr2twmwLDUCkDJ8dhnTACktI_sdBxl_HbR2vSjp30nIlY2BHc/s16000/AutoBot.png"> <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjWD2i5JkXwfTgVco4mfhbA-8EoibREDu3B4Dr-ywPcnUUJR-0tklKll5aDMkz9Iv0V_xGE5mbk71fxoVUDeSKt23yoXcHBt5N8AP_kE0-y_ns2FRvsLJQyZvw-eT8XDG6rzHIrwYIHZ1nbM1ChQ4_tdk8lj4Hc7yQAnC7yxECPCTnlfKXZCS_OwB0OaC0/s16000/Screenshot%20(57).png">
+#### Dashboard
+
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjb4qULU0a2BfdWjFpXUKm-tqnU2aSV7LF_SQ2u0XNr1KdHr_yQ1wBLxKlz872wvfrWVnr-S4ffFXwyhWiqZDClTh7bU_QFV0Z_4l5LybF8qtGP2ma0pFu7kDc_ObI0WoGYJwPKIMf4xOJr2twmwLDUCkDJ8dhnTACktI_sdBxl_HbR2vSjp30nIlY2BHc/s16000/AutoBot.png"> 
+
+#### Features
+
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjWD2i5JkXwfTgVco4mfhbA-8EoibREDu3B4Dr-ywPcnUUJR-0tklKll5aDMkz9Iv0V_xGE5mbk71fxoVUDeSKt23yoXcHBt5N8AP_kE0-y_ns2FRvsLJQyZvw-eT8XDG6rzHIrwYIHZ1nbM1ChQ4_tdk8lj4Hc7yQAnC7yxECPCTnlfKXZCS_OwB0OaC0/s16000/Screenshot%20(57).png">
 
 ## Features
 
